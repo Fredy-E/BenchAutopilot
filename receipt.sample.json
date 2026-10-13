@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-10-13T17:09:30.716632+00:00",
+  "config": "sample.json",
+  "ok": true,
+  "stages": [
+    {
+      "name": "static-checks",
+      "type": "exec",
+      "cmd": "python -c print('static ok'); print('py_compile simulation ok')",
+      "exit": 0,
+      "status": "ok",
+      "timed_out": false,
+      "started_at": "2026-10-13T17:09:30.605577+00:00",
+      "ended_at": "2026-10-13T17:09:30.641760+00:00",
+      "duration_s": 0.036,
+      "tail": [
+        "static ok",
+        "py_compile simulation ok"
+      ]
+    },
+    {
+      "name": "build",
+      "type": "build",
+      "cmd": "python -c print('build ok: dry-run artifact step (no hardware touched)')",
+      "exit": 0,
+      "status": "ok",
+      "timed_out": false,
+      "started_at": "2026-10-13T17:09:30.641950+00:00",
+      "ended_at": "2026-10-13T17:09:30.678874+00:00",
+      "duration_s": 0.037,
+      "tail": [
+        "build ok: dry-run artifact step (no hardware touched)"
+      ]
+    },
+    {
+      "name": "artifact-manifest",
+      "type": "manifest",
+      "exit": 0,
+      "status": "ok",
+      "timed_out": false,
+      "started_at": "2026-10-13T17:09:30.679105+00:00",
+      "ended_at": "2026-10-13T17:09:30.679542+00:00",
+      "duration_s": 0.0,
+      "sha256s": {
+        "sample_artifact.txt": "632f4d45f668d868005df7860334519a15f44f8f8e59d0f6aa03bf1042bd3542"
+      },
+      "missing": [],
+      "tail": [
+        "sample_artifact.txt sha256=632f4d45f668d868..."
+      ]
+    },
+    {
+      "name": "smoke-test",
+      "type": "exec",
+      "cmd": "python -c print('smoke ok: harmless one-liner, no USB/hardware')",
+      "exit": 0,
+      "status": "ok",
+      "timed_out": false,
+      "started_at": "2026-10-13T17:09:30.679558+00:00",
+      "ended_at": "2026-10-13T17:09:30.716498+00:00",
+      "duration_s": 0.037,
+      "tail": [
+        "smoke ok: harmless one-liner, no USB/hardware"
+      ]
+    }
+  ]
+}
